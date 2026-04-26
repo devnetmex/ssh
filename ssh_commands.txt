@@ -1,0 +1,14 @@
+- Delete ssh keyh for a host
+
+ssh-keygen -R 10.1.1.1
+
+- generate ssh keys under .ssh directory
+
+ssh-keygen -t ed25519 -C "your_email@example.com" or "test"
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_ed25519
+
+
+copy the .pub key and save in your app
